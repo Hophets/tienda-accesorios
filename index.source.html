@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f5f0" />
+    <meta
+      name="description"
+      content="Carteras y accesorios que van contigo. Descubre Modesta, encuentra tus favoritos y prepara tu pedido por WhatsApp, sin necesidad de registrarte."
+    />
+    <title>Modesta — Detalles que van contigo</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="assets/fonts/manrope.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/cormorant-garamond.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <svg
+      class="svg-sprite"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <symbol id="icon-search" viewBox="0 0 24 24">
+        <circle cx="10.8" cy="10.8" r="6.8" />
+        <path d="m16 16 4.3 4.3" />
+      </symbol>
+      <symbol id="icon-bag" viewBox="0 0 24 24">
+        <path d="M5 7h14l1 14H4L5 7Z" />
+        <path d="M8 8V6a4 4 0 0 1 8 0v2" />
+      </symbol>
+      <symbol id="icon-user" viewBox="0 0 24 24">
+        <circle cx="12" cy="7" r="4" />
+        <path d="M4 21v-2a8 8 0 0 1 16 0v2" />
+      </symbol>
+      <symbol id="icon-arrow" viewBox="0 0 24 24">
+        <path d="M4 12h15m-6-6 6 6-6 6" />
+      </symbol>
+      <symbol id="icon-arrow-up" viewBox="0 0 24 24">
+        <path d="M6 18 18 6M6 6h12v12" />
+      </symbol>
+      <symbol id="icon-chevron" viewBox="0 0 24 24">
+        <path d="m6 9 6 6 6-6" />
+      </symbol>
+      <symbol id="icon-close" viewBox="0 0 24 24">
+        <path d="m6 6 12 12M6 18 18 6" />
+      </symbol>
+      <symbol id="icon-menu" viewBox="0 0 24 24">
+        <path d="M4 7h16M4 12h16M4 17h16" />
+      </symbol>
+      <symbol id="icon-truck" viewBox="0 0 24 24">
+        <path d="M1 4h13v13H1zM14 9h4l4 4v4h-8" />
+        <circle cx="5.5" cy="18" r="2.5" />
+        <circle cx="18.5" cy="18" r="2.5" />
+      </symbol>
+      <symbol id="icon-heart" viewBox="0 0 24 24">
+        <path
+          d="M20.5 4.5a5.4 5.4 0 0 0-7.6 0l-.9.9-.9-.9a5.4 5.4 0 0 0-7.6 7.6L12 21l8.5-8.9a5.4 5.4 0 0 0 0-7.6Z"
+        />
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24">
+        <path d="m5 12 4 4L19 6" />
+      </symbol>
+      <symbol id="icon-whatsapp" viewBox="0 0 24 24">
+        <path
+          d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.5L3 20.5l1.3-4.7a8.5 8.5 0 1 1 16.2-4.1Z"
+        />
+        <path
+          d="M8 7.8c.5 3.9 3.2 6.7 7 7.4l1.5-2.1-2.6-1.2-.8 1c-1.3-.5-2.4-1.6-2.9-2.8l1-.9L10 6.8 8 7.8Z"
+        />
+      </symbol>
+      <symbol id="icon-instagram" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.6" cy="6.4" r=".8" fill="currentColor" stroke="none" />
+      </symbol>
+      <symbol id="icon-pin" viewBox="0 0 24 24">
+        <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z" />
+        <circle cx="12" cy="10" r="2.5" />
+      </symbol>
+    </svg>
+
+    <a class="skip-link" href="#catalogo">Ir al catálogo</a>
+    <div class="announcement">
+      <span>Pequeños detalles. Grandes favoritos.</span
+      ><span class="announcement-right"
+        >Hechos para acompañarte <span aria-hidden="true">✧</span></span
+      >
+    </div>
+
+    <header class="site-header">
+      <div class="header-main page-width">
+        <button
+          class="icon-button mobile-menu-button"
+          id="mobile-menu-toggle"
+          type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <svg class="icon"><use href="#icon-menu" /></svg>
+        </button>
+        <a class="brand" href="#inicio" aria-label="Modesta, inicio"
+          >modesta<span class="brand-dot">.</span></a
+        >
+        <nav class="main-nav" id="main-nav" aria-label="Categorías principales">
+          <a href="#catalogo" data-category="accesorios">Accesorios</a>
+          <a href="#catalogo" data-category="carteras">Carteras</a>
+          <a href="#catalogo" data-category="hombres">Hombres</a>
+          <a href="#catalogo" data-category="ninos">Niños/Niñas</a>
+        </nav>
+        <div class="header-actions">
+          <button
+            class="account-button"
+            id="account-open"
+            type="button"
+            aria-label="Abrir mi cuenta"
+          >
+            <svg class="icon"><use href="#icon-user" /></svg
+            ><span id="account-label">Mi cuenta</span>
+          </button>
+          <span class="header-divider" aria-hidden="true"></span>
+          <button
+            class="cart-button"
+            id="cart-open"
+            type="button"
+            aria-label="Abrir carrito"
+          >
+            <svg class="icon"><use href="#icon-bag" /></svg
+            ><span class="cart-label">Mi carrito</span
+            ><span
+              class="cart-count"
+              id="cart-count"
+              aria-live="polite"
+              aria-atomic="true"
+              >0</span
+            >
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="inicio">
+      <section class="hero page-width" aria-labelledby="hero-heading">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="status-dot" aria-hidden="true"></span> TU ESENCIA, EN
+            CADA DETALLE
+          </p>
+          <h1 id="hero-heading">
+            Los detalles<br />hacen <em>la diferencia.</em>
+          </h1>
+          <p class="hero-description">
+            Carteras y accesorios para expresarte a tu manera.<br
+              class="desktop-break"
+            />
+            Piezas que te encantan, para días muy tuyos.
+          </p>
+          <a class="button button-dark" href="#catalogo"
+            >Descubre la colección
+            <svg class="icon"><use href="#icon-arrow-up" /></svg
+          ></a>
+          <div class="hero-bottom">
+            <span class="mini-line" aria-hidden="true"></span>
+            <p>
+              Simplemente tú.<br /><strong>Extraordinariamente Modesta.</strong>
+            </p>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img
+            class="hero-image"
+            src="assets/hero.png"
+            width="1122"
+            height="1402"
+            alt="Cartera de tono caramelo y aros dorados sobre una base de piedra iluminada por el sol"
+            fetchpriority="high"
+          />
+          <span class="hero-stamp">MENOS RUIDO.<br /><span>Más tú.</span></span>
+          <a
+            class="hero-product-label"
+            href="#catalogo"
+            data-category="carteras"
+            ><span
+              ><small>UN NUEVO FAVORITO</small
+              ><strong>Tu próxima compañera</strong></span
+            ><span class="round-arrow"
+              ><svg class="icon"><use href="#icon-arrow-up" /></svg></span
+          ></a>
+          <span class="hero-image-caption"
+            >LA BELLEZA ESTÁ EN LO COTIDIANO — MODESTA</span
+          >
+        </div>
+      </section>
+
+      <div
+        class="benefit-strip page-width"
+        aria-label="Ventajas de comprar en Modesta"
+      >
+        <div>
+          <svg class="icon"><use href="#icon-heart" /></svg
+          ><span>Piezas elegidas con intención</span>
+        </div>
+        <span class="benefit-separator" aria-hidden="true"></span>
+        <div>
+          <svg class="icon"><use href="#icon-whatsapp" /></svg
+          ><span>Compra fácil por WhatsApp</span>
+        </div>
+        <span class="benefit-separator" aria-hidden="true"></span>
+        <div>
+          <svg class="icon"><use href="#icon-truck" /></svg
+          ><span>Envío o retiro, tú eliges</span>
+        </div>
+      </div>
+
+      <section
+        class="catalog-section page-width"
+        id="catalogo"
+        aria-labelledby="catalog-heading"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">ENCUENTRA ESO QUE VA CONTIGO</p>
+            <h2 id="catalog-heading">Tus próximos <em>favoritos.</em></h2>
+          </div>
+          <p class="section-aside">
+            Para todos tus planes.<br />Y todas tus versiones.
+          </p>
+        </div>
+        <div class="catalog-toolbar">
+          <div
+            class="category-filters"
+            role="group"
+            aria-label="Filtrar productos por categoría"
+          >
+            <button
+              class="category-button active"
+              data-category="all"
+              type="button"
+              aria-pressed="true"
+            >
+              Ver todo <span>08</span>
+            </button>
+            <button
+              class="category-button"
+              data-category="carteras"
+              type="button"
+              aria-pressed="false"
+            >
+              Carteras
+            </button>
+            <button
+              class="category-button"
+              data-category="accesorios"
+              type="button"
+              aria-pressed="false"
+            >
+              Accesorios
+            </button>
+            <button
+              class="category-button"
+              data-category="hombres"
+              type="button"
+              aria-pressed="false"
+            >
+              Hombres
+            </button>
+            <button
+              class="category-button"
+              data-category="ninos"
+              type="button"
+              aria-pressed="false"
+            >
+              Niños/Niñas
+            </button>
+          </div>
+          <form class="search-form" id="search-form" role="search">
+            <svg class="icon" aria-hidden="true">
+              <use href="#icon-search" />
+            </svg>
+            <label class="sr-only" for="search-input"
+              >Buscar productos por nombre</label
+            >
+            <input
+              id="search-input"
+              name="q"
+              type="search"
+              placeholder="Busca tu próximo favorito"
+              autocomplete="off"
+            />
+          </form>
+        </div>
+        <p
+          class="results-count"
+          id="results-count"
+          role="status"
+          aria-live="polite"
+        >
+          8 piezas para descubrir <span>· Precios en USD</span>
+        </p>
+        <div class="products-grid" id="products-grid"></div>
+        <div class="empty-state" id="empty-catalog" hidden>
+          <svg class="icon"><use href="#icon-search" /></svg>
+          <h3>No encontramos esa pieza</h3>
+          <p>Prueba con otro nombre o explora toda la colección.</p>
+          <button
+            class="button button-dark"
+            data-action="clear-filters"
+            type="button"
+          >
+            Ver toda la colección
+          </button>
+        </div>
+        <noscript
+          ><p class="noscript-notice">
+            Activa JavaScript para ver el catálogo, usar los filtros y preparar
+            tu pedido.
+          </p></noscript
+        >
+        <div class="catalog-footnote">
+          <span>El detalle perfecto te está esperando.</span
+          ><span
+            >Elegido por ti. Con cariño, Modesta.
+            <span aria-hidden="true">✧</span></span
+          >
+        </div>
+      </section>
+
+      <section class="brand-note" aria-labelledby="brand-heading">
+        <div class="brand-note-inner page-width">
+          <svg
+            class="brand-note-star"
+            viewBox="0 0 80 80"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <path d="M40 4v72M4 40h72M14.5 14.5l51 51m0-51-51 51" />
+          </svg>
+          <div>
+            <p class="eyebrow">SIN REGLAS. CON ESENCIA.</p>
+            <h2 id="brand-heading">
+              No necesitas una ocasión especial.<br /><em
+                >Tu día a día ya lo es.</em
+              >
+            </h2>
+          </div>
+          <p>
+            Creemos en esos pequeños detalles que<br class="desktop-break" />
+            transforman lo cotidiano. En elegir lo que<br
+              class="desktop-break"
+            />
+            te representa. En llevar un poquito de ti<br
+              class="desktop-break"
+            />
+            a donde vayas.
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="help-section page-width"
+        id="preguntas"
+        aria-labelledby="faq-heading"
+      >
+        <div class="help-intro">
+          <p class="eyebrow">TE LO PONEMOS FÁCIL</p>
+          <h2 id="faq-heading">¿Alguna <em>duda?</em></h2>
+          <p>
+            Estamos aquí para acompañarte,<br />desde el primer clic hasta tu
+            próximo favorito.
+          </p>
+          <button class="text-link" type="button" data-whatsapp>
+            Conversemos por WhatsApp
+            <svg class="icon"><use href="#icon-arrow-up" /></svg>
+          </button>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>
+              ¿Cómo hago mi pedido?<svg class="icon">
+                <use href="#icon-chevron" />
+              </svg>
+            </summary>
+            <p>
+              Elige tus favoritos, agrégalos al carrito y selecciona envío o
+              retiro. Al finalizar se abrirá WhatsApp con el resumen para que lo
+              envíes a Modesta. No necesitas crear una cuenta. El pedido se
+              confirma cuando coordinemos disponibilidad y pago contigo.
+            </p>
+          </details>
+          <details>
+            <summary>
+              ¿Qué métodos de pago aceptan?<svg class="icon">
+                <use href="#icon-chevron" />
+              </svg>
+            </summary>
+            <p>
+              Consulta por WhatsApp los métodos de pago disponibles antes de
+              confirmar tu pedido. En esta página no se solicitan datos
+              bancarios ni se realizan cobros.
+            </p>
+          </details>
+          <details>
+            <summary>
+              ¿Cómo funcionan los envíos y retiros?<svg class="icon">
+                <use href="#icon-chevron" />
+              </svg>
+            </summary>
+            <p>
+              Puedes elegir envío a domicilio o retiro en un punto de entrega.
+              El costo, la cobertura, el plazo y el punto de retiro se coordinan
+              por WhatsApp antes del pago. Los precios del catálogo no incluyen
+              envío.
+            </p>
+          </details>
+          <details>
+            <summary>
+              ¿Puedo hacer un cambio?<svg class="icon">
+                <use href="#icon-chevron" />
+              </svg>
+            </summary>
+            <p>
+              Antes de comprar, consúltanos las condiciones y los plazos de
+              cambio aplicables a tu pieza. Si tienes un inconveniente,
+              escríbenos con el resumen de tu pedido para ayudarte.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section class="contact-banner page-width" id="contacto">
+        <div>
+          <span class="eyebrow">DEL OTRO LADO, ESTAMOS NOSOTROS</span>
+          <h2>Hablemos de tus <em>favoritos.</em></h2>
+          <p>Te ayudamos a encontrar ese detalle que estás buscando.</p>
+        </div>
+        <button class="button button-dark" type="button" data-whatsapp>
+          <svg class="icon"><use href="#icon-whatsapp" /></svg> Escríbenos por
+          WhatsApp <svg class="icon"><use href="#icon-arrow-up" /></svg>
+        </button>
+      </section>
+    </main>
+
+    <footer class="site-footer page-width">
+      <div class="footer-top">
+        <a class="brand" href="#inicio"
+          >modesta<span class="brand-dot">.</span></a
+        >
+        <p>Detalles que van contigo.</p>
+        <nav aria-label="Información y contacto">
+          <a href="#catalogo">La colección</a
+          ><a href="#preguntas">Preguntas frecuentes</a
+          ><a href="#contacto" id="instagram-link"
+            ><svg class="icon"><use href="#icon-instagram" /></svg> Redes y
+            contacto</a
+          >
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Modesta. Todos los derechos reservados.</p>
+        <span>Hecho con intención. Llevado con estilo.</span>
+      </div>
+    </footer>
+
+    <button
+      class="floating-whatsapp"
+      type="button"
+      data-whatsapp
+      aria-label="Consultar por WhatsApp"
+    >
+      <svg class="icon"><use href="#icon-whatsapp" /></svg
+      ><span>¿Te ayudamos?</span>
+    </button>
+
+    <dialog
+      class="product-dialog"
+      id="product-dialog"
+      aria-labelledby="product-dialog-title"
+    >
+      <button
+        class="dialog-close icon-button"
+        data-close="product-dialog"
+        type="button"
+        aria-label="Cerrar detalles"
+      >
+        <svg class="icon"><use href="#icon-close" /></svg>
+      </button>
+      <div id="product-detail"></div>
+    </dialog>
+
+    <dialog class="cart-dialog" id="cart-dialog" aria-labelledby="cart-heading">
+      <div class="cart-panel">
+        <div class="dialog-heading">
+          <div>
+            <p class="eyebrow">BUENAS ELECCIONES</p>
+            <h2 id="cart-heading">Tu carrito<em>.</em></h2>
+          </div>
+          <button
+            class="icon-button"
+            data-close="cart-dialog"
+            type="button"
+            aria-label="Cerrar carrito"
+          >
+            <svg class="icon"><use href="#icon-close" /></svg>
+          </button>
+        </div>
+        <div class="cart-empty empty-state" id="cart-empty">
+          <svg class="icon"><use href="#icon-bag" /></svg>
+          <h3>Aquí caben tus favoritos</h3>
+          <p>Descubre la colección y agrega esas piezas que van contigo.</p>
+          <button
+            class="button button-dark"
+            type="button"
+            data-close="cart-dialog"
+          >
+            Seguir explorando <svg class="icon"><use href="#icon-arrow" /></svg>
+          </button>
+        </div>
+        <div id="cart-items" class="cart-items"></div>
+        <div id="checkout-content" hidden>
+          <form id="checkout-form" class="checkout-form">
+            <fieldset class="delivery-options">
+              <legend>¿Cómo te lo entregamos?</legend>
+              <label
+                ><input
+                  type="radio"
+                  name="delivery"
+                  value="delivery"
+                  checked
+                /><span
+                  ><svg class="icon"><use href="#icon-truck" /></svg>Envío a
+                  domicilio</span
+                ></label
+              ><label
+                ><input type="radio" name="delivery" value="pickup" /><span
+                  ><svg class="icon"><use href="#icon-bag" /></svg>Retiro en
+                  tienda</span
+                ></label
+              >
+            </fieldset>
+            <div class="form-row">
+              <label for="customer-name"
+                >Tu nombre <span aria-hidden="true">*</span
+                ><input
+                  id="customer-name"
+                  name="customerName"
+                  autocomplete="name"
+                  placeholder="¿Cómo te llamas?"
+                  maxlength="100"
+                  required /></label
+              ><label for="customer-contact"
+                >Teléfono o correo <span aria-hidden="true">*</span
+                ><input
+                  id="customer-contact"
+                  name="customerContact"
+                  autocomplete="email"
+                  placeholder="Para contactarte"
+                  maxlength="120"
+                  required
+              /></label>
+            </div>
+            <div id="delivery-fields" class="delivery-fields">
+              <label id="saved-address-wrap" for="saved-address" hidden
+                >Direcciones guardadas<select id="saved-address">
+                  <option value="">Usar otra dirección</option>
+                </select></label
+              ><label for="delivery-address"
+                >Dirección de entrega <span aria-hidden="true">*</span
+                ><textarea
+                  id="delivery-address"
+                  name="address"
+                  autocomplete="street-address"
+                  rows="2"
+                  maxlength="500"
+                  placeholder="Ciudad, sector, calle y número"
+                  required
+                ></textarea></label
+              ><label for="delivery-reference"
+                >Referencia o enlace de ubicación
+                <span class="optional">(opcional)</span
+                ><input
+                  id="delivery-reference"
+                  name="reference"
+                  maxlength="300"
+                  placeholder="Un punto de referencia para encontrarte" /></label
+              ><label class="checkbox-label" id="save-address-wrap" hidden
+                ><input id="save-address" type="checkbox" />Guardar dirección en
+                mi perfil de este dispositivo</label
+              >
+            </div>
+            <div class="cart-totals">
+              <p><span>Subtotal</span><span id="cart-subtotal">$0.00</span></p>
+              <p class="shipping-line">
+                <span>Envío</span
+                ><span id="shipping-note">A coordinar por WhatsApp</span>
+              </p>
+              <p class="total-line">
+                <strong>Total de productos</strong
+                ><strong id="cart-total">$0.00</strong>
+              </p>
+            </div>
+            <button
+              class="button button-dark checkout-button"
+              id="checkout-button"
+              type="submit"
+            >
+              <svg class="icon"><use href="#icon-whatsapp" /></svg>Finalizar
+              pedido por WhatsApp<svg class="icon">
+                <use href="#icon-arrow-up" />
+              </svg>
+            </button>
+            <p class="checkout-note">
+              Sin registro y sin cobros en línea. Disponibilidad, pago y entrega
+              se confirman por WhatsApp.
+            </p>
+            <p class="config-note" id="whatsapp-config-note">
+              Selecciona el contacto de Modesta al abrir WhatsApp.
+            </p>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog
+      class="account-dialog"
+      id="account-dialog"
+      aria-label="Mi perfil en este dispositivo"
+    >
+      <button
+        class="dialog-close icon-button"
+        data-close="account-dialog"
+        type="button"
+        aria-label="Cerrar mi cuenta"
+      >
+        <svg class="icon"><use href="#icon-close" /></svg>
+      </button>
+      <div id="account-content"></div>
+    </dialog>
+    <div
+      class="toast"
+      id="toast"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+  </body>
+</html>
