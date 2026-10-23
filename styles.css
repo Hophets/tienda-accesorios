@@ -717,13 +717,13 @@ textarea:focus-visible {
   text-underline-offset: 4px;
 }
 .product-price {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 650;
   white-space: nowrap;
 }
 .product-description {
   color: var(--muted);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.8;
   min-height: 16px;
 }
@@ -1658,10 +1658,10 @@ dialog[open] {
     font-size: 21px;
   }
   .product-price {
-    font-size: 15px;
+    font-size: 18px;
   }
   .product-description {
-    font-size: 14px;
+    font-size: 16px;
   }
   .brand-note-inner {
     gap: 25px;
@@ -1802,7 +1802,7 @@ dialog[open] {
     font-size: 23px;
   }
   .product-description {
-    font-size: 14px;
+    font-size: 16px;
   }
   .brand-note-inner > p {
     max-width: 230px;
@@ -2079,10 +2079,10 @@ dialog[open] {
     font-size: 23px;
   }
   .product-price {
-    font-size: 15px;
+    font-size: 18px;
   }
   .product-description {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.7;
   }
   .product-add {
@@ -2458,14 +2458,14 @@ dialog[open] {
     font-size: 21px;
   }
   .product-price {
-    font-size: 15px;
+    font-size: 18px;
     letter-spacing: -0.2px;
   }
   .product-title-row {
     gap: 5px;
   }
   .product-description {
-    font-size: 14px;
+    font-size: 16px;
     min-height: 28px;
   }
   .product-add {
@@ -2544,14 +2544,14 @@ dialog[open] {
   font-size: 12px;
 }
 .product-description {
-  font-size: 14px;
+  font-size: 16px;
   min-height: 38px;
 }
 .product-category {
   font-size: 8px;
 }
 .product-price {
-  font-size: 15px;
+  font-size: 18px;
 }
 .product-add {
   font-size: 11px;
@@ -2576,10 +2576,10 @@ dialog[open] {
     font-size: 23px;
   }
   .product-description {
-    font-size: 14px;
+    font-size: 16px;
   }
   .product-price {
-    font-size: 15px;
+    font-size: 18px;
   }
   .product-add {
     font-size: 10px;
@@ -2597,10 +2597,10 @@ dialog[open] {
     font-size: 23px;
   }
   .product-description {
-    font-size: 14px;
+    font-size: 16px;
   }
   .product-price {
-    font-size: 15px;
+    font-size: 18px;
   }
   .product-add {
     font-size: 10px;
@@ -2633,11 +2633,11 @@ dialog[open] {
     font-size: 22px;
   }
   .product-description {
-    font-size: 14px;
+    font-size: 16px;
     min-height: 35px;
   }
   .product-price {
-    font-size: 15px;
+    font-size: 18px;
   }
   .product-add {
     font-size: 10px;
