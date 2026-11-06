@@ -4,9 +4,9 @@
  * Los perfiles y solicitudes son locales: no constituyen autenticación ni pedidos confirmados.
  */
 const STORE_CONFIG = Object.freeze({
-  whatsappNumber: "",
+  whatsappNumber: "78453984",
   instagramUrl: "",
-  currency: "USD",
+  currency: "BOB",
   locale: "es-US",
   shippingFee: 0, // El costo real de envío se acuerda por WhatsApp; no se cobra aquí.
 });
