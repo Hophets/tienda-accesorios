@@ -1,4 +1,4 @@
-# Modesta
+# XPLAU
 
 Tienda de carteras y accesorios con HTML, CSS y JavaScript puro. `index.html` es la versión autónoma de `modesta.html`, con estilos, scripts, imágenes y fuentes incluidos. También se conservan los archivos fuente separados para editar la tienda. No necesita paquetes ni claves de API.
 
